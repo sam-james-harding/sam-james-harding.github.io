@@ -4,6 +4,9 @@ const url = 'https://api.github.com/users/sam-james-harding/repos'
 Http.open("GET", url)
 Http.send()
 
+//site elements
+const repoDisplay = document.getElementById("repoDisplay")
+
 //api recieve
 Http.onreadystatechange=(e)=>{
     var response = Http.responseText
@@ -11,10 +14,8 @@ Http.onreadystatechange=(e)=>{
     formatReposList(reposData)
 }
 
+//create repos list element
 function formatReposList(reposData) {
-    //site elements
-    const repoDisplay = document.getElementById("repoDisplay")
-
     //creating html for div insert
     reposHTML = `<h1>My GitHub Repositories</h1>`
 
