@@ -17,7 +17,7 @@ Http.onreadystatechange=(e)=>{
 //create repos list element
 function formatReposList(reposData) {
     //creating html for div insert
-    reposHTML = `<h1>My GitHub Repositories</h1>`
+    reposHTML = ""
 
     for (i=0;i<reposData.length;i++) {
         var name  = reposData[i].name
@@ -28,7 +28,7 @@ function formatReposList(reposData) {
             continue;
         }
 
-        reposHTML += `<a href="${link}"><h3>${name}</h3></a>`
+        reposHTML += `<a href="${link}" target="_blank"><h3>${name}</h3></a>`
 
         if (!description) {
             reposHTML += `<p><i>No description provided</i></p>`
