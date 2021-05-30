@@ -17,5 +17,14 @@
 }
 
 #navbar a:hover {
-    background: rgb(8, 178, 227);
+    /*background: rgb(8, 178, 227);*/
+    background: rgb(131, 251, 173);
+    color: black;
+}
+
+#navbar h1 {
+    margin-left: 0%;
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.2cm;
 }
