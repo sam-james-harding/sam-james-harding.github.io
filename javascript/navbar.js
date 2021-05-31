@@ -5,7 +5,9 @@ var title = window.location.pathname.split("/").pop()
 const pages = [
     ["Home", "home.html"],
     ["GitHub Repositories", "repos.html"],
-    ["3D Printing", "3dprinting.html"]
+    ["3D Printing", "3dprinting.html"],
+    ["Electronics", "electronics.html"],
+    ["Games", "games.html"]
 ]
 
 navbarHTML = `<h1>Sam Harding</h1>`

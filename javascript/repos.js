@@ -23,12 +23,14 @@ function formatReposList(reposData) {
         var name  = reposData[i].name
         var description = reposData[i].description
         var link = reposData[i].html_url
+        var lang = reposData[i].language
 
         if (name=="sam-james-harding.github.io") {
             continue;
         }
 
         reposHTML += `<a href="${link}" target="_blank"><h3>${name}</h3></a>`
+        reposHTML += `<i>${lang}</i>`
 
         if (!description) {
             reposHTML += `<p><i>No description provided</i></p>`
