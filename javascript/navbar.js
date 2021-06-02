@@ -1,5 +1,12 @@
-var navbar = document.createElement("div")
+//header
+var header = document.createElement("div")
+header.innerHTML = "<h1>Sam Harding</h1>"
 
+header.setAttribute("id", "header")
+document.body.appendChild(header)
+
+//navbar
+var navbar = document.createElement("div")
 var title = window.location.pathname.split("/").pop()
 
 const pages = [
@@ -10,7 +17,7 @@ const pages = [
     ["Games", "games.html"]
 ]
 
-navbarHTML = `<h1>Sam Harding</h1>`
+navbarHTML = ``
 for (i=0; i<pages.length; i++) {
     var name = pages[i][0]
     var link = pages[i][1]
@@ -27,4 +34,4 @@ for (i=0; i<pages.length; i++) {
 navbar.innerHTML = navbarHTML
 navbar.setAttribute("id", "navbar")
 
-document.body.appendChild(navbar)
+header.appendChild(navbar)

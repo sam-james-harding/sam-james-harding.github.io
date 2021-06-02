@@ -1,12 +1,13 @@
-#navbar {
-    overflow: hidden;
-    background-color: rgb(72, 77, 109);
-    position: fixed;
+#header {
     top: 0;
     left: 0;
-    width: 100%;
+    background-color: rgb(72, 77, 109);
+    position: fixed;
     font-family: 'Lucida Grande';
+    overflow: hidden;
+    width: 100%;
 }
+
 
 #navbar a {
     float: left;
@@ -23,9 +24,10 @@
     color: black;
 }
 
-#navbar h1 {
-    margin-left: 0%;
-    text-align: center;
+#header h1 {
     margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
     font-size: 1.2cm;
+    color: rgb(239, 233, 244);
 }
