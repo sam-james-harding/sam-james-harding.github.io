@@ -1,33 +1,50 @@
 #header {
     top: 0;
     left: 0;
-    background-color: rgb(72, 77, 109);
     position: fixed;
+
+    background-color: rgb(72, 77, 109);
     font-family: 'Lucida Grande';
+    
     overflow: hidden;
+
     width: 100%;
 }
-
 
 #navbar a {
     float: left;
     display: block;
-    color: rgb(239, 233, 244);
-    text-align: center;
     padding: 14px 16px;
+
+    text-align: center;
     text-decoration: none;
+
+    color: rgb(239, 233, 244);
+
+    transform: rotate(0deg);
+    transition: transform 1.5s;
 }
 
 #navbar a:hover {
     /*background: rgb(8, 178, 227);*/
     background: rgb(131, 251, 173);
     color: black;
+    transform: rotate(360deg);
 }
 
 #header h1 {
     margin-top: 0;
     margin-bottom: 0;
+
     text-align: center;
     font-size: 1.2cm;
+
     color: rgb(239, 233, 244);
+    animation: spinner 4s;
+
+}
+
+#navbar #selected {
+    background-color: rgb(87, 167, 115); 
+    color: white;
 }
