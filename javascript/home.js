@@ -2,7 +2,13 @@
 details = {
     DOB: new Date(2004, 4, 27),
     job: "student",
-    location: "Brisbane"
+    location: "Brisbane",
+    hobbies: [
+        "Programming",
+        "3D Printing",
+        "Rock Climbing",
+        "DIY"
+    ]
 }
 
 //functions
@@ -20,6 +26,17 @@ function getCurrentAge() {
     }
 
     return currentDate.getFullYear() - birthDate.getFullYear();
+}
+
+function secondsSinceBirth() {
+    const birthDate = details.DOB;
+    let currentDate = new Date();
+
+    let difference = currentDate.getTime() - birthDate.getTime();
+
+    let seconds = Math.floor(difference/1000)
+
+    return seconds;
 }
 
 //setting element values
@@ -41,3 +58,34 @@ jobSpan.textContent = details.job
 //location
 const locationSpan = document.getElementById("location");
 locationSpan.textContent = details.location;
+
+//hobbies
+const hobbiesDiv = document.getElementById("hobbies");
+
+var hobbiesListHTML = '';
+hobbiesListHTML += '<ul>';
+
+for (var i = 0; i < details.hobbies.length; i++) {
+    hobby = details.hobbies[i];
+    hobbiesListHTML += `<li>${hobby}</li>`;
+}
+
+hobbiesListHTML += "</ul>";
+hobbiesDiv.innerHTML = hobbiesListHTML;
+
+//stats
+const statsDiv = document.getElementById("stats");
+
+function updateStats() {
+statsDiv.innerHTML = `
+    <ul>
+        <li>Seconds since I was born: ${secondsSinceBirth()}</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    `
+}
+
+updateStats()
+setInterval(updateStats, 100);
