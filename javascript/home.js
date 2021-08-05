@@ -8,7 +8,14 @@ details = {
         "3D Printing",
         "Rock Climbing",
         "DIY"
-    ]
+    ],
+    programmingStartYears: {
+        "python": 2018,
+        "c++": 2020,
+        "javascript": 2020,
+        "dart": 2021,
+        "c": 2021
+    }
 }
 
 //functions
@@ -39,7 +46,7 @@ function secondsSinceBirth() {
     return seconds;
 }
 
-async function numberOfRepos(){
+async function numberOfRepos() {
     if (!this.length) {
         const url = 'https://api.github.com/users/sam-james-harding/repos';
         const response = await (await fetch(url)).json();
@@ -50,6 +57,12 @@ async function numberOfRepos(){
     else {
         return this.length;
     }
+}
+
+function numBlinks() {
+    const blinksPerDay = 28800;
+    const daysSinceBirth = secondsSinceBirth()/86400;
+    return Math.floor(blinksPerDay*daysSinceBirth);
 }
 
 //setting element values
@@ -93,9 +106,8 @@ async function updateStats() {
     statsDiv.innerHTML = `
         <ul>
             <li>Seconds since I was born: ${secondsSinceBirth()}</li>
-            <li>Number of public GitHub repos (including this website): ${await numberOfRepos()}</li>
-            <li></li>
-            <li></li>
+            <li>Number of my public GitHub repos: ${await numberOfRepos()}</li>
+            <li>Number of times I've (probably) blinked: ${numBlinks()}</li>
         </ul>
         `
 }
