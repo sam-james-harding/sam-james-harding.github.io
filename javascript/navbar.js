@@ -13,7 +13,7 @@ const pages = [
     ["Home", "home.html"],
     ["GitHub Repositories", "repos.html"],
     ["Electronics", "electronics.html"],
-    ["Downloads", "downloads.html"]
+    ["Downloads and Resources", "downloads.html"]
 ]
 
 
