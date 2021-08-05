@@ -1,17 +1,10 @@
-//api call
-const Http = new XMLHttpRequest()
-const url = 'https://api.github.com/users/sam-james-harding/repos'
-Http.open("GET", url)
-Http.send()
-
 //site elements
 const repoDisplay = document.getElementById("repoDisplay")
 
-//api recieve
-Http.onreadystatechange=(e)=>{
-    var response = Http.responseText
-    var reposData = JSON.parse(response)
-    formatReposList(reposData)
+async function getReposList() {
+    const url = 'https://api.github.com/users/sam-james-harding/repos';
+    const response = await (await fetch(url)).json();
+    formatReposList(response);
 }
 
 //create repos list element
@@ -43,3 +36,5 @@ function formatReposList(reposData) {
 
     repoDisplay.innerHTML = reposHTML
 }
+
+getReposList();

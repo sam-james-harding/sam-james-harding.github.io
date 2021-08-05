@@ -39,6 +39,19 @@ function secondsSinceBirth() {
     return seconds;
 }
 
+async function numberOfRepos(){
+    if (!this.length) {
+        const url = 'https://api.github.com/users/sam-james-harding/repos';
+        const response = await (await fetch(url)).json();
+
+        this.length = response.length;
+        return this.length;
+    }
+    else {
+        return this.length;
+    }
+}
+
 //setting element values
 //age
 const ageSpan = document.getElementById("age");
@@ -76,16 +89,16 @@ hobbiesDiv.innerHTML = hobbiesListHTML;
 //stats
 const statsDiv = document.getElementById("stats");
 
-function updateStats() {
-statsDiv.innerHTML = `
-    <ul>
-        <li>Seconds since I was born: ${secondsSinceBirth()}</li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    `
+async function updateStats() {
+    statsDiv.innerHTML = `
+        <ul>
+            <li>Seconds since I was born: ${secondsSinceBirth()}</li>
+            <li>Number of public GitHub repos (including this website): ${await numberOfRepos()}</li>
+            <li></li>
+            <li></li>
+        </ul>
+        `
 }
 
-updateStats()
+updateStats();
 setInterval(updateStats, 100);

@@ -12,7 +12,6 @@ var title = window.location.pathname.split("/").pop()
 const pages = [
     ["Home", "home.html"],
     ["GitHub Repositories", "repos.html"],
-    ["Electronics", "electronics.html"],
     ["Downloads and Resources", "downloads.html"]
 ]
 
