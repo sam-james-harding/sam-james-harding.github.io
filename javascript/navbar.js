@@ -15,7 +15,6 @@ const pages = [
     ["Downloads and Resources", "downloads.html"]
 ]
 
-
 var navbarHTML = ``
 for (i=0; i<pages.length; i++) {
     var name = pages[i][0]
