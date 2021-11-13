@@ -12,7 +12,8 @@ var title = window.location.pathname.split("/").pop()
 const pages = [
     ["Home", "home.html"],
     ["GitHub Repositories", "repos.html"],
-    ["Downloads and Resources", "downloads.html"]
+    ["Downloads and Resources", "downloads.html"],
+    ["Truth Table Generator", "truth-tables.html"]
 ]
 
 var navbarHTML = ``

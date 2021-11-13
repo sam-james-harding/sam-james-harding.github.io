@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/truth-tables.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
+
+    <script defer src="../javascript/navbar.js"></script>
+    <script defer src="../javascript/truth-tables.js"></script>
+
+    <title>Truth Table Generator- Sam Harding</title>
+</head>
+
+
+<body>
+    <h1 id="sectionHeader">Truth Table Generator</h1>
+
+    <div class="content">
+    
+    <h3>Logic Equation</h3>
+    <input type="text" id="logic-equation-entry" size=50>
+    <input type="submit" id="generate-button" onclick="onEquationSubmit()">
+
+    <h3>Truth Table</h3>
+    <div id="truth-table-output"></div>
+
+    </div>
+</body>
+
+</html>
