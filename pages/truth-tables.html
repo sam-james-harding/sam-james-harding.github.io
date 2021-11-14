@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/truth-tables.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
 
     <script defer src="../javascript/navbar.js"></script>
@@ -22,7 +24,11 @@
 
     <div class="content">
     
-    <h3>Logic Equation</h3>
+    <h3>
+        Logic Expression
+        <i title="Input a logic expression (consisting of inputs (text i.e. a, z, light), brackets, + (OR), * (AND), ~(NOT), and ^ (XOR)."
+        class="fa fa-question-circle"></i>
+    </h3>
     <input type="text" id="logic-equation-entry" size=50>
     <input type="submit" id="generate-button" onclick="onEquationSubmit()">
 
