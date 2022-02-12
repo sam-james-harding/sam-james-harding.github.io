@@ -114,3 +114,21 @@ async function updateStats() {
 
 updateStats();
 setInterval(updateStats, 100);
+
+// super secret section
+function secretStuff() {
+    const password = document.getElementById("secretpassword").value
+
+    const encrypted = "U2FsdGVkX1/p5z27oggK0fSJqbdfz/clxot1tRFC0VEyrAPNATFr3pnruNakItwMq2BMQL/Ho3ctN/yvzGhUX5bbJmBsHsZau/OhcgQiiYQDcv3FTcFlhXg5++/a7VM4"
+
+    let url;
+    try {
+        const decrypted = CryptoJS.AES.decrypt(encrypted, password).toString(CryptoJS.enc.Utf8);
+        url = new URL(decrypted);
+    }
+    catch (_) {
+        return;
+    }
+
+    window.open(url);
+}

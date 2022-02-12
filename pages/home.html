@@ -9,6 +9,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
     <script defer src="../javascript/home.js"></script>
     <script defer src="../javascript/navbar.js"></script>
 
@@ -32,6 +33,11 @@
 
         <h3>Hobbies</h3>
         <div id="hobbies"></div>
+
+        <h3>Unknown</h3>
+        <form onsubmit="secretStuff()" action="#">
+            <input type="password" id="secretpassword">
+        </form>
 
     </div>
 </body>
