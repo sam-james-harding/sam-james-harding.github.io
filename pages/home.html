@@ -1,45 +1,57 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home.css">
 
+    <script defer src="../js/base.js"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
-    <script defer src="../javascript/home.js"></script>
-    <script defer src="../javascript/navbar.js"></script>
 
     <title>Home - Sam Harding</title>
 </head>
-
 <body>
-    <h1 id="sectionHeader">Home</h1>
+    <div id="topbar">
+        <img src="../resources/logo.png" alt="My Logo" id="logo">
+        <h1>Sam Harding - Home</h1>
+    </div>
+
+    <div class="include" path="../templates/navbar.html"></div>
 
     <div class="content">
-        <h2>About</h2> 
+
+        <h2>About Me</h2>
         <p>
-            Hi, I'm Sam, <span id="age"></span>-year old 
-            <span id="job"></span> in <span id="location"></span>.
-            This website is where I put some of my various projects,
-            and where I test and experiment with web-related programming.
+            Hi, I'm Sam, an engineering student at UQ in Brisbane. This website is where I host some of
+            my personal projects, alongside links to my GitHub repositories, any experiments with 
+            web programming/design, and any resources I think are helpful.
         </p>
 
-        <h3>Stats</h3>
-        <div id="stats"></div>
+        <h2>Contact Me</h2>
+        <p>
+            To contact me, please send an email to 
+            <a href="mailto:samueljames.harding@icloud.com">my address</a>,
+            and I should be back to you soon.
+        </p>
 
-        <h3>Hobbies</h3>
-        <div id="hobbies"></div>
-
-        <h3>Unknown</h3>
-        <form onsubmit="secretStuff()" action="#">
-            <input type="password" id="secretpassword">
-        </form>
+        <h2>Find Me On...</h2>
+        <div id="socials">
+            <span>
+                <img src="../resources/LI-In-Bug.png">
+                <a href="https://www.linkedin.com/in/samuel-harding-6a4389227/">Linkedin</a>
+            </span>
+            
+            <span>
+                <img src="../resources/GitHub-Mark-120px-plus.png">
+                <a href="https://github.com/sam-james-harding">GitHub</a>
+            </span>
+        </div>
 
     </div>
 </body>
-
 </html>

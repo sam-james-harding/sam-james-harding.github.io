@@ -1,27 +1,31 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
+    <link rel="stylesheet" href="../css/base.css">
 
-    <script defer src="../javascript/navbar.js"></script>
-    <script defer src="../javascript/repos.js"></script>
+    <script defer src="../js/base.js"></script>
+    <script defer src="../js/repos.js"></script>
+
+    <script defer src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
 
     <title>GitHub Repositories - Sam Harding</title>
 </head>
-
 <body>
-
-    <h1 id="sectionHeader">My GitHub Repositories</h1>
-    
-    <div class="content" id="repoDisplay">
-        
+    <div id="topbar">
+        <img src="../resources/logo.png" alt="My Logo" id="logo">
+        <h1>Sam Harding - GitHub Repositories</h1>
     </div>
 
-</body>
+    <div class="include" path="../templates/navbar.html"></div>
 
+    <div class="content" id="repos">
+        <div class="github-card" data-github="sam-james-harding" data-width="400" data-height="" data-theme="default"></div>
+    </div>
+</body>
 </html>
